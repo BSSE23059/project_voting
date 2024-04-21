@@ -1,43 +1,50 @@
-#include "person.h"
-Person::Person(){
-        this->name="";
-        this->DOB=0;
-        this->cnic="";
-        this->is_alive=false;
-        this->has_voted=false;
-        this->sector="";
-        this->gender=' ';
-        this->addr="";
-    }
 
-Person::Person(string name,int dob,string cnic,bool is_alive,string sector,char gender,string address){
-        this->name=name;
-        this->DOB=dob;
-        this->cnic=cnic;
-        this->is_alive=is_alive;
-        this->has_voted=false;
-        this->sector=sector;
-        this->gender=gender;
-        this->addr=address;
-    }
+#include "Person.h"
 
-string Person::getSector() const{
-    return  this->sector;
+
+Person::Person() {
+    personName = "";
+    CNIC = "";
+    Gender = "";
+    dateOfBirth = "";
 }
-int Person::getDOB() const{
-    return this->DOB;
+
+const string Person::getPersonName() const {
+    return personName;
 }
-string Person::getCnic() const{
-    return this->cnic;
+
+const string Person::getCNIC() const {
+    return CNIC;
 }
-char Person::getGender() const{
-    return this->gender;
+
+const string Person::getDateOfBirth() const {
+    return dateOfBirth;
 }
-void Person::setHasVoted(bool has_voted){
-    this->has_voted=has_voted;
+
+const string Person::getGender() const {
+    return Gender;
 }
-void Person::display() const {
-    cout<<"Name: "<<name<<" DOB: "<<DOB<<" CNIC: "<<cnic<<" Is alive: "<< is_alive<<endl;
+
+const Address Person::getPersonAddress() const {
+    return personAddress;
 }
-bool Person::getHasVoted() const{return has_voted;};
-bool Person::getIsAlive() const{return is_alive;};
+
+void Person::setPersonName(std::string name) {
+    personName = name;
+}
+
+void Person::setPersonGender(std::string perGender) {
+    Gender = perGender;
+}
+
+void Person::setDateOfBirth(std::string dob) {
+    dateOfBirth = dob;
+}
+
+void Person::setPersonCNIC(std::string perCNIC) {
+    CNIC = perCNIC;
+}
+
+void Person::setPersonAddress(Address &address) {
+    personAddress = address;
+}

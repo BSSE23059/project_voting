@@ -1,34 +1,30 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef PARTYREGISTRATION_PERSON_H
+#define PARTYREGISTRATION_PERSON_H
 #include <iostream>
+#include "Address.h"
 using namespace std;
-class Person{
-    private:
-    string name;
-    int DOB;
-    string cnic;
-    bool is_alive;
-    bool has_voted;
-    string sector;
-    char  gender;
-    string addr;
 
-    public:
+class Person {
+private:
+    string personName;
+    string CNIC;
+    string dateOfBirth;
+    string Gender;
+    Address personAddress;
+public:
     Person();
-    Person(string name,int dob,string cnic,bool is_alive,string sector,char gender,string address);
-    string getSector() const;
-    int getDOB() const;
-    string getCnic() const;
-    char getGender() const;
-    bool getHasVoted() const;
-    bool getIsAlive() const;
-    void setHasVoted(bool ) ;
-    virtual void display()const ;
-    
+    const string getPersonName() const;
+    const string getCNIC() const;
+    const string getDateOfBirth() const;
+    const string getGender() const;
+    const Address getPersonAddress() const;
+    void setPersonName(string name);
+    void setPersonCNIC(string perCNIC);
+    void setDateOfBirth(string dob);
+    void setPersonAddress(Address &address);
+    void setPersonGender(string perGender);
+    void castVote();
 };
 
 
-
-
-
-#endif
+#endif //PARTYREGISTRATION_PERSON_H
