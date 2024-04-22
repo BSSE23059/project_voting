@@ -82,6 +82,7 @@ void addCandidates(string partyName,string partyRegID,string partySymbol){
                 }
 
                 Address address1;
+                address1.setConcatenatedAddress(address);
 
                 auto *partyCandidate = new PartyCandidate(name,CNIC,gender,dateOfBirth,partyName,partySymbol,address1);
 
