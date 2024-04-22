@@ -83,7 +83,9 @@ void addCandidates(string partyName,string partyRegID,string partySymbol){
 
                 Address address1;
 
-                auto *partyCandidate = new PartyCandidate(name,CNIC,gender,dateOfBirth,partyName,partySymbol,address);
+                auto *partyCandidate = new PartyCandidate(name,CNIC,gender,dateOfBirth,partyName,partySymbol,address1);
+
+
 
 
                 break;

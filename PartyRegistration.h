@@ -19,7 +19,7 @@ public:
     static PartyRegistration* getInstance();
     void addParty(Party* party);
     void addCandidate(PartyCandidate* candidate,string& partyName);
-    void nominatedCandidate(PartyCandidate* partyCandidate,string& provinceName, string& districtName, string& sectorCode);
+    void nominatedCandidate(PartyCandidate* partyCandidate, string& districtName, string& sectorCode);
     void loginAdmin(string adminName,string password);
 
 };
